@@ -4,6 +4,9 @@ import { MantineProvider, ColorSchemeScript } from '@mantine/core';
 import { theme } from '../../theme';
 import '@mantine/core/styles.css';
 import { Toaster } from 'react-hot-toast';
+import { ToastContainer } from 'react-toastify';
+import WidgetRealtime from './_widget/realtime';
+import 'react-toastify/dist/ReactToastify.css';
 
 export const metadata = {
   title: 'Mantine Next.js template',
@@ -22,7 +25,12 @@ export default function RootLayout({ children }: { children: any }) {
         />
       </head>
       <body suppressHydrationWarning={true}>
-        <MantineProvider theme={theme}>{children} <Toaster /></MantineProvider>
+        <MantineProvider theme={theme}>
+          {children}
+          <Toaster />
+          <WidgetRealtime />
+        </MantineProvider>
+        <ToastContainer />
       </body>
     </html>
   );
