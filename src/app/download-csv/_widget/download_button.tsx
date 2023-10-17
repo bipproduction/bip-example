@@ -20,8 +20,6 @@ export default function DownloadButton() {
                 }
             ];
 
-
-
             const jsonDataString = papa.unparse(jsonData);
             const jsonDataUri = "data:text/csv;charset=utf-8," + encodeURIComponent(jsonDataString);
 
