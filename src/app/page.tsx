@@ -3,7 +3,13 @@ import Link from 'next/link'
 import _ from 'lodash'
 import { Flex, Stack, Text, Title } from '@mantine/core'
 
-const list_page = ["upload-csv", "download-csv", "router-search-param", "realtime-notif"]
+const list_page = [
+  "upload-csv", 
+  "download-csv", 
+  "router-search-param", 
+  "realtime-notif",
+  "tmp-upload"
+]
 
 export default function Home() {
   return (
